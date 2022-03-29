@@ -1,0 +1,16 @@
+function solution(phone_number) {
+    var answer = '';
+    let count = 1;
+    for(let i = phone_number.length - 1; i >= 0; i--) {
+        if(count <= 4) {
+            answer += phone_number[i];
+            count++;
+        }
+        else {
+            answer += '*';
+        }
+    }
+    let ans = answer.split('').reverse().join('');
+
+    return ans;
+}
