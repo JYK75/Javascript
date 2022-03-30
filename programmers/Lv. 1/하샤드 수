@@ -1,0 +1,10 @@
+function solution(x) {
+    var answer = true;
+    let str = String(x);
+    let number = 0;
+    for(let i = 0; i < str.length; i++) {
+        number += Number(str[i]);
+    }
+    answer = x % number == 0 ? true : false;
+    return answer;
+}
