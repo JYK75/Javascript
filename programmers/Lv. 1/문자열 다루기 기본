@@ -1,0 +1,7 @@
+function solution(s) {
+    if(s.includes('e'))
+        return false;
+
+    let answer = ((s.length == 4 || s.length == 6) && !isNaN(Number(s))) ? true : false;
+    return answer;
+}
