@@ -1,0 +1,13 @@
+function solution(n) {
+    let answer = '';
+    let arr = [];
+    let temp = String(n);
+    for(let i of temp) {
+        arr.push(i);
+    }
+    arr.sort((a, b) => b - a);
+    for(let i of arr) {
+        answer += i;
+    }
+    return Number(answer);
+}
