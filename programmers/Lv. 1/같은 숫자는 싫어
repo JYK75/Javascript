@@ -1,0 +1,12 @@
+function solution(arr)
+{
+    let answer = [];
+    let prevNum = -1;
+    for(let i of arr) {
+        if(prevNum != i) {
+            answer.push(i);
+            prevNum = i;
+        }
+    }
+    return answer;
+}
