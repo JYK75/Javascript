@@ -1,0 +1,15 @@
+function solution(s){
+    var answer = true;
+    let pCount = 0;
+    let yCount = 0;
+    for(let i of s) {
+        if(i == 'p' || i == 'P') {
+            pCount++;
+        }
+        else if(i == 'y' || i == 'Y') {
+            yCount++;
+        }
+    }
+    answer = pCount == yCount ? true : false;
+    return answer;
+}
