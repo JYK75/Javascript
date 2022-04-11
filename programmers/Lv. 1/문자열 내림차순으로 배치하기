@@ -1,0 +1,18 @@
+function solution(s) {
+    let answer = '';
+    let temp = [];
+    for(let i of s) {
+        temp.push(i);
+    }
+    temp.sort().reverse();
+    for(let i of temp) {
+        answer += i;
+    }
+    return answer;
+}
+
+// 함수이용
+function solution(s) {
+    let answer = s.split('').sort().reverse().join('');
+    return answer;
+}
