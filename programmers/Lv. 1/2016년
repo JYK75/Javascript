@@ -1,0 +1,12 @@
+function solution(a, b) {
+    let answer = '';
+    let month = [31,29,31,30,31,30,31,31,30,31,30,31];
+    let day = ['THU','FRI','SAT','SUN','MON','TUE','WED'];
+    let sum = b;
+      for(let i = 0; i < a-1; ++i) {
+        sum += month[i];
+    }  
+
+    answer = day[(sum % 7)];
+    return answer;
+}
