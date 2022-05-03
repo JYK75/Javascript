@@ -1,0 +1,22 @@
+function solution(record) {
+    let answer = [];
+    let nickName = [];
+    for(let i = 0; i < record.length; i++) {
+        let data = record[i].split(' ');
+        if(data[0] == 'Enter') {
+            nickName[data[1]] = data[2];
+        } else if(data[0] == 'Change') {
+            nickName[data[1]] = data[2];
+        }
+    }
+
+    for(let i = 0; i < record.length; i++) {
+        let data = record[i].split(' ');
+        if(data[0] == 'Enter') {
+            answer.push(`${nickName[data[1]]}님이 들어왔습니다.`);
+        } else if(data[0] == 'Leave') {
+            answer.push(`${nickName[data[1]]}님이 나갔습니다.`);
+        }
+    }
+    return answer;
+}
