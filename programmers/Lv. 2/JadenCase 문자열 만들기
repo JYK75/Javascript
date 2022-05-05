@@ -1,0 +1,9 @@
+function solution(s) {
+    let data = s.split(' ');
+    for(let i = 0; i < data.length; i++) {
+        data[i] = data[i].toLowerCase();
+        data[i] = data[i].charAt(0).toUpperCase() + data[i].slice(1);
+    }
+    let answer = data.join(' ');
+    return answer;
+}
