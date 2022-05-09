@@ -1,0 +1,21 @@
+function solution(progresses, speeds) {
+    var answer = [];
+    let index = 0;
+    while(index < progresses.length) {
+        let count = 0;
+        for(let i = index; i < progresses.length; i++) {
+            progresses[i] += speeds[i];
+        }
+        for(let i = index; i < progresses.length; i++) {
+            if(progresses[i] < 100) break;
+            count++;
+        }
+        if(count == 0) continue;
+        else {
+            answer.push(count);
+            index += count;
+        } 
+    }
+
+    return answer;
+}
