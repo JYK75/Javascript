@@ -1,0 +1,25 @@
+function solution(priorities, location) {
+    var answer = 0;
+    let queue = [];
+    for(let i = 0; i < priorities.length; i++) {
+        queue[i] = [priorities[i], i];
+    }
+
+    while(queue.length) {
+        let max = 0;
+        for(let i = 0; i < queue.length; i++) {
+            if(max < queue[i][0]) {
+                max = queue[i][0];
+            }
+        }
+        let front = queue.shift();
+        if(max == front[0]) {
+            answer++;
+            if(front[1] == location) break;
+        } else {
+            queue.push(front);
+        }
+    }
+
+    return answer;
+}
