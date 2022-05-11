@@ -1,0 +1,18 @@
+function count(str) {
+    let count = 0;
+    for(let i = 0; i < str.length; i++) {
+        if(str[i] == '1') count++;
+    }
+    return count;
+}
+function solution(n) {
+    var answer = 0;
+    let nCount = count(n.toString(2));
+    for(let i = n+1; i <= 1000000; i++) {
+        if(nCount == count(i.toString(2))) {
+            answer = i;
+            break;
+        }
+    }
+    return answer;
+}
