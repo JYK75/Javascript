@@ -1,0 +1,6 @@
+function solution(s) {
+    var answer = '';
+    let data = s.split(' ');
+    answer += Math.min(...data) + ' ' + Math.max(...data);
+    return answer;
+}
