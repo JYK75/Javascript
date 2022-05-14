@@ -1,0 +1,12 @@
+function solution(clothes) {
+    let answer = 1;
+    let map = {};
+    for(let i = 0; i < clothes.length; i++) {
+        map[clothes[i][1]] = (map[clothes[i][1]] || 1) + 1;
+    }   
+    for(let i in map) {
+        answer *= (map[i]);
+    }
+    
+    return answer - 1;
+}
